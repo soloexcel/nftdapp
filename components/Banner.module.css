@@ -1,0 +1,63 @@
+.h1 {
+    font-size: clamp(4rem,  8vmin, 5rem);
+    font-family: sans-serif;
+    color: hsl(0 0% 98%);
+}
+
+.h2 {
+    margin-bottom: 2rem;
+}
+
+.underlined {
+    /*   background: red; */
+      position: relative;
+    }
+    
+    .underlineMask:after {
+      content: '';
+      position: absolute;
+      top: 95%;
+      width: 150%;
+      aspect-ratio: 3 / 1;
+      left: 50%;
+      transform: translate(-50%, 0);
+      border-radius: 50%;
+      border: 6px solid rgb(55, 6, 79);
+      /* Use a conic gradient mask to hide and show the bits you want */
+      --spread: 140deg;
+      --start: 290deg;
+      mask: conic-gradient(from var(--start), white 0 var(--spread), transparent var(--spread));
+    }
+    
+    
+    .underlineOverflow {
+      display: inline-block;
+      /* A little extra padding and overflow hidden   */
+      overflow: hidden;
+      padding-bottom: clamp(1rem, 2vmin, 2rem);
+    }
+    .underlineOverflow:after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      height: 150%;
+      aspect-ratio: 2.5 / 1;
+      left: 50%;
+      transform: translate(-50%, -10%);
+      border-radius: 50%;
+      border: 6px solid #a21e20;
+    }
+    
+    .underlineClip:after {
+      content: '';
+      position: absolute;
+      top: 95%;
+      width: 150%;
+      aspect-ratio: 3 / 1;
+      left: 50%;
+      transform: translate(-50%, 0);
+      border-radius: 50%;
+      border: 6px solid #8d1320;
+      /* Use a clip-path to hide and show the bits you want */
+      clip-path: polygon(0 0, 50% 50%, 100% 0);
+}
