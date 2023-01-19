@@ -102,7 +102,7 @@ const Home = () => {
         <Banner
           name="Discover, collect, and sell extraordinary NFTs"
           childStyles="md:text-4xl sm:text-2xl xs:text-xl text-left"
-          parentStyles="justifyStart mb-6 h-72 sm:h-60 p-12 xs:p-4 xs:h-44 rounded-3xl"
+          // parentStyles="justifyStart mb-6 h-72 sm:h-60 p-50 xs:p-4 xs:h-44 rounded-3xl"
         />
         {!isLoading && !nfts.length ? (
           <h1 className="font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold ml-4 xs:ml-0">That&apos;s wierd... No NFTs for sale!</h1>

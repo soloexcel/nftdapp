@@ -18,7 +18,13 @@ const Footer = () => {
   const { theme } = useTheme();
   return (
     <footer className="flexCenter flex-col border-t dark:border-nft-black-1 border-nft-gray-1 sm:py-8 py-16">
-      <div className="w-full minmd:w-4/5 flex flex-row md:flex-col sm:px-4 px-16">
+      <div className="w-full minmd:w-4/5 flex flex-row mx-auto md:flex-col sm:px-4 px-16">
+        
+        <div className="flex-1 justify-center items-center flex-wrap ml-10 md:ml-50 md:mt-8">
+          <FooterLinks heading="PROWESS" items={['Explore', 'How it works', 'Contact Us']} />
+          {/* <FooterLinks heading="Support" items={['Help Center', 'Terms of Service', 'Legal', 'Privacy Policy']} /> */}
+        </div>
+
         <div className="flexStart flex-1 flex-col">
           <div className="flexCenter cursor-pointer">
             {/* <Image src={images.logo02} alt="logo" width={32} height={32} /> */}
@@ -31,10 +37,6 @@ const Footer = () => {
               <Button btnName="Email me" classStyles="rounded-md" />
             </div>
           </div>
-        </div>
-        <div className="flex-1 flexBetweenStart flex-wrap ml-10 md:ml-0 md:mt-8">
-          <FooterLinks heading="PROWESS" items={['Explore', 'How it works', 'Contact Us']} />
-          <FooterLinks heading="Support" items={['Help Center', 'Terms of Service', 'Legal', 'Privacy Policy']} />
         </div>
       </div>
       <div className="flexCenter w-full mt-5 border-t dark:border-nft-black-1 border-nft-gray-1 sm:px-4 px-16">
