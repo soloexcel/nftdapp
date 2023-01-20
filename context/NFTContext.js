@@ -2,11 +2,25 @@ import React, { useState, useEffect } from 'react';
 import Web3Modal from 'web3modal';
 import { ethers } from 'ethers';
 import axios from 'axios';
-import { create as ipfsHttpClient } from 'ipfs-http-client';
+// import { create as ipfsHttpClient } from 'ipfs-http-client';
+import { create } from 'ipfs-http-client';
 
 import { MarketAddress, MarketAddressABI } from './constants';
 
-const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0');
+const projectId = process.env.REACT_APP_PROJECT_ID;
+const projectSecretKey = process.env.REACT_APP_PROJECT_SECRET_KEY;
+const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecretKey).toString('base64');
+const client = create({
+  host: 'ipfs.infura.io',
+  port: 5001,
+  protocol: 'https',
+  apiPath: '/api/v0',
+  headers: {
+    authorization: auth,
+  }
+})
+
+// const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0');
 
 const fetchContract = (signerOrProvider) => new ethers.Contract(MarketAddress, MarketAddressABI, signerOrProvider);
 
@@ -45,9 +59,11 @@ export const NFTProvider = ({ children }) => {
   };
 
   const uploadToIPFS = async (file) => {
+    // const file = e.target.files[0] 
     try {
       const added = await client.add({ content: file });
-      const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+      // const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+      const url = `https://prowess.infura-ipfs.io/ipfs/${added.path}`;
       return url;
     } catch (error) {
       console.log(('Error uploading to IPFS', error));
@@ -80,7 +96,9 @@ export const NFTProvider = ({ children }) => {
 
     try {
       const added = await client.add(data);
-      const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+      // const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+      const url = `https://prowess.infura-ipfs.io/ipfs/${added.path}`;
+
       await createSale(url, price);
       router.push('/');
     } catch (error) {
@@ -130,6 +148,7 @@ export const NFTProvider = ({ children }) => {
 
     return items;
   };
+
 
   const buyNFT = async (nft) => {
     const web3modal = new Web3Modal();
