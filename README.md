@@ -1,6 +1,6 @@
 # CryptoKet - NFT MarketPlace
 
-![App Screenshot](assets/nft-marketplace.jpg)
+![App Screenshot](assets/Screenshot.png)
 
 CryptoKet is made using the immense power of Solidity and Next.js. This project combines futuristic elements of Web3 blockchain development and the popular culture wave of non-fungible tokens (NFT).
 

@@ -1,6 +1,6 @@
 const fs = require('fs');
 require('@nomiclabs/hardhat-waffle');
-
+require("dotenv").config({ path: ".env" });
 // const privateKey = fs.readFileSync('.secret').toString().trim();
 
 const MUMBAI_URL = process.env.MUMBAI_URL
