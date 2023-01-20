@@ -62,8 +62,8 @@ export const NFTProvider = ({ children }) => {
     // const file = e.target.files[0] 
     try {
       const added = await client.add({ content: file });
-      // const url = `https://ipfs.infura.io/ipfs/${added.path}`;
-      const url = `https://prowess.infura-ipfs.io/ipfs/${added.path}`;
+      const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+      // const url = `https://prowess.infura-ipfs.io/ipfs/${added.path}`;
       return url;
     } catch (error) {
       console.log(('Error uploading to IPFS', error));
@@ -96,8 +96,8 @@ export const NFTProvider = ({ children }) => {
 
     try {
       const added = await client.add(data);
-      // const url = `https://ipfs.infura.io/ipfs/${added.path}`;
-      const url = `https://prowess.infura-ipfs.io/ipfs/${added.path}`;
+      const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+      // const url = `https://prowess.infura-ipfs.io/ipfs/${added.path}`;
 
       await createSale(url, price);
       router.push('/');
