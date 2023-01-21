@@ -20,7 +20,7 @@ Once your development environment is set up, you can clone the project repositor
 
 ## Getting Started
 
-# Copy code
+## Copy code
 
 ```bash 
 npm install

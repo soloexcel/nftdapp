@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useTheme } from 'next-themes';
-
+import { FaLinkedin, FaGithub, FaTwitter, FaTelegramPlane } from 'react-icons/fa';
 import images from '../assets/index';
 import { Button } from './index';
 
@@ -15,6 +16,35 @@ const FooterLinks = ({ heading, items }) => (
 );
 
 const Footer = () => {
+
+  const socialMediaLinks = [
+    {
+      name: "github",
+      link: "https://github.com/soloexcel/nftdapp",
+      icon: <FaGithub/>,
+    },
+
+    {
+      name: "twitter",
+      link: "https://twitter.com/blockie_chain",
+      icon: <FaTwitter/>,
+    },
+
+    {
+      name: "linkedIn",
+      link: "https://www.linkedin.com/in/solomon-lekan-5319a9212/",
+      icon: <FaLinkedin/>,
+    },
+
+    {
+      name: "telegram",
+      link: "@blockie_chain",
+      icon: <FaTelegramPlane/>
+    }
+      
+  ]
+
+
   const { theme } = useTheme();
   return (
     <footer className="flexCenter flex-col border-t dark:border-nft-black-1 border-nft-gray-1 sm:py-8 py-16">
@@ -43,19 +73,30 @@ const Footer = () => {
         <div className="flexBetween flex-row w-full minmd:w-4/5 sm:flex-col mt-7">
           <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-base">PROWESS, Inc. All Rights Reserved.</p>
           <div className="flex flex-row sm:mt-4">
-            {[images.instagram, images.twitter, images.telegram, images.discord].map((image, index) => (
+            {socialMediaLinks.map((media, idx)  => ( 
+              <div key={idx + 1} className="mx-2 cursor-pointer">
+              <Link href={{ pathname: `${media.link}` }} className={theme === 'light' ? 'filter invert' : '' }>{media.icon}</Link>
+            </div>
+          )
+
+            )}
+          </div>
+          {/* <div className="flex flex-row sm:mt-4">
+            {[images.discord, images.twitter, images.telegram].map((image, index) => (
               <div className="mx-2 cursor-pointer" key={index}>
-                <Image
-                  src={image}
-                  alt="social"
-                  objectFit="contain"
-                  width={24}
-                  height={24}
-                  className={theme === 'light' ? 'filter invert' : ''}
-                />
+                <Link href="https://twitter.com/blockie_chain">
+                    <Image
+                      src={image}
+                      alt="social"
+                      objectFit="contain"
+                      width={24}
+                      height={24}
+                      className={theme === 'light' ? 'filter invert' : ''}
+                    />
+                </Link>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
