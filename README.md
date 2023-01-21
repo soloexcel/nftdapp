@@ -1,16 +1,35 @@
-# Prowess - NFT MarketPlace
+
+## Welcome to PROWESS NFT Marketplace
 
 ![App Screenshot](assets/Screenshot.png)
 
-Prowess is an NFT Marketplace that combines futuristic elements of Web3 blockchain development and the popular culture wave of non-fungible tokens (NFT).
+Prowess is an NFT Marketplace 
 
 This application includes creation, buying, selling and reselling of NFTs and user authentication through metamask wallet.
 
-Context api is used for state management and tailwind css is used for styling the application. Solidity is used to write smart contract and hardhat is used to test the smart contract.
+
+PROWESS is a marketplace for Non-Fungible Tokens (NFTs) that combines futuristic elements of Web3 blockchain development and the popular culture wave of non-fungible tokens (NFT), which are a type of digital asset that represent ownership of a unique item or piece of content, such as artwork, collectibles, and more. Unlike traditional cryptocurrencies, NFTs cannot be replaced or exchanged for an identical item, making them truly one-of-a-kind.
+
+With PROWESS, creating, buying, and selling NFTs is simple and efficient. Our platform allows artists, creators, and collectors to easily mint their own NFTs and showcase them to a global audience. Users can browse and purchase NFTs from a variety of creators and categories, and even manage and track their own NFT collection.
+
+One of the key features of PROWESS is the ability for creators to set their own price for their NFTs, giving them more control and autonomy over the value of their work. Additionally, our platform integrates with popular blockchain wallets, such as MetaMask and WalletConnect, allowing for seamless and secure transactions.
+
+The technologies behind PROWESS include the use of blockchain, specifically Ethereum, to mint and track NFTs, as well as a web3 javascript library to interact with the blockchain. The frontend of the platform is built using React, and the backend utilizes a decentralized storage facility - Infura IPFS
+
+To run this project locally, you will need to have a local development environment set up with NodeJS and npm installed. You will also need to set up a local Ethereum blockchain using tools such as Ganache or Truffle Suite, Hardhat, and connect it to the frontend using a web3 provider.
+
+Once your development environment is set up, you can clone the project repository and run the following commands:
+
+## Copy code
+
+npm install
+npm start
+This will start the development server and you can access the platform on http://localhost:3000
+
+Whether you are an artist looking to monetize your work, a collector searching for unique and rare items, or simply curious about the world of NFTs, PROWESS is the perfect platform for you. Join us today and discover the future of digital ownership.
+
 
 ## Getting Started
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 First, run the development server:
 
@@ -22,39 +41,8 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-# Basic Sample Hardhat Project
-
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
-
-Try running some of the following tasks:
-
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
