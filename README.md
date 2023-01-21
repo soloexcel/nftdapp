@@ -3,16 +3,12 @@
 
 ![App Screenshot](assets/Screenshot.png)
 
-Prowess is an NFT Marketplace 
-
-This application includes creation, buying, selling and reselling of NFTs and user authentication through metamask wallet.
-
 
 PROWESS is a marketplace for Non-Fungible Tokens (NFTs) that combines futuristic elements of Web3 blockchain development and the popular culture wave of non-fungible tokens (NFT), which are a type of digital asset that represent ownership of a unique item or piece of content, such as artwork, collectibles, and more. Unlike traditional cryptocurrencies, NFTs cannot be replaced or exchanged for an identical item, making them truly one-of-a-kind.
 
 With PROWESS, creating, buying, and selling NFTs is simple and efficient. Our platform allows artists, creators, and collectors to easily mint their own NFTs and showcase them to a global audience. Users can browse and purchase NFTs from a variety of creators and categories, and even manage and track their own NFT collection.
 
-One of the key features of PROWESS is the ability for creators to set their own price for their NFTs, giving them more control and autonomy over the value of their work. Additionally, our platform integrates with popular blockchain wallets, such as MetaMask and WalletConnect, allowing for seamless and secure transactions.
+One of the key features of PROWESS is the ability for creators to set their own price for their NFTs, giving them more control and autonomy over the value of their work. Additionally, our platform integrates with popular blockchain wallet, MetaMask and allowing for seamless and secure transactions.
 
 The technologies behind PROWESS include the use of blockchain, specifically Ethereum, to mint and track NFTs, as well as a web3 javascript library to interact with the blockchain. The frontend of the platform is built using React, and the backend utilizes a decentralized storage facility - Infura IPFS
 
