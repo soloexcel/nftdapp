@@ -16,18 +16,18 @@ To run this project locally, you will need to have a local development environme
 
 Once your development environment is set up, you can clone the project repository and run the following commands:
 
-## Copy code
-
-npm install
-npm start
-This will start the development server and you can access the platform on http://localhost:3000
-
-Whether you are an artist looking to monetize your work, a collector searching for unique and rare items, or simply curious about the world of NFTs, PROWESS is the perfect platform for you. Join us today and discover the future of digital ownership.
 
 
 ## Getting Started
 
-First, run the development server:
+# Copy code
+
+```bash 
+npm install
+npm start
+
+```
+## OR 
 
 ```bash
 npm run dev
@@ -35,7 +35,10 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will start the development server and you can access the platform on http://localhost:3000 with your browser to see the result.
+
+
+Whether you are an artist looking to monetize your work, a collector searching for unique and rare items, or simply curious about the world of NFTs, PROWESS is the perfect platform for you. Join us today and discover the future of digital ownership.
 
 
 
