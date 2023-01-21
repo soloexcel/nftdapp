@@ -110,7 +110,8 @@ const Navbar = () => {
               setIsOpen(false);
             }}
           >
-            <Image src={images.logo02} alt="logo" width={32} height={32} />
+            {/* <Image src={images.logo02} alt="logo" width={32} height={32} /> */}
+            <p className="dark:text-white text-nft-black-1 font-semibold text-lg ml-1">PROWESS</p>
           </div>
         </Link>
       </div>
