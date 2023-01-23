@@ -36,8 +36,7 @@ import images from '../assets'
 
 const Banner = ({ parentStyles}) => {
   return (
-    <div className={Style.home_section + `relative w-full flex items-center z-0 overflow-hidden nft-gradient ${parentStyles}`}>
-        {/* <Navbar /> */}
+    <div className={Style.home_section + `relative w-full flex items-center z-0 overflow-hidden nft-gradient`}>
         <div className={Style.ellipse}></div>
         <div className={Style.container}>
             <div className={Style.heroContent}>
