@@ -53,12 +53,12 @@
 }
 
 .fa-moon {
-  color: pink;
+  color: rgb(230, 213, 213);
   font-size: 9px;
 }
 
 .fa-sun {
-  color: yellow;
+  color: rgb(251, 255, 0);
   font-size: 9px;
 }
 

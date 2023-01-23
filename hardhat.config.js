@@ -9,9 +9,9 @@
 // module.exports = {
 //   defaultNetwork: "mumbai",
 //   networks: {
-//     hardhat: {
-//       chainId: 1337,
-//     },
+    // hardhat: {
+    //   chainId: 1337,
+    // },
 
 //     mumbai: {
 //       url: MUMBAI_URL,

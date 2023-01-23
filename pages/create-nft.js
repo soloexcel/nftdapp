@@ -45,7 +45,7 @@ const CreateNFT = () => {
           <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-xl">Upload File</p>
           <div className="mt-4">
             <div {...getRootProps()} className={fileStyle}>
-              <input {...getInputProps()} />
+              <input {...getInputProps()} type="file" name="file"/>
               <div className="flexCenter flex-col text-center">
                 <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-xl">JPG, PNG, GIF, SVG, WEBM Max 100mb.</p>
                 <div className="my-12 w-full flex justify-center">
