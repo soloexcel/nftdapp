@@ -7,18 +7,21 @@ import { create } from 'ipfs-http-client';
 
 import { MarketAddress, MarketAddressABI } from './constants';
 
-const projectId = process.env.REACT_APP_PROJECT_ID;
-const projectSecretKey = process.env.REACT_APP_PROJECT_SECRET_KEY;
+// const projectId = process.env.REACT_APP_PROJECT_ID;
+const projectId = "2KW2Rx8nZXHTRAqaJ4OkIFw8FeE";
+// const projectSecretKey = process.env.REACT_APP_PROJECT_SECRET_KEY;
+const projectSecretKey = "d874c6412c07d0a5248bd3d32f96a044"
 const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecretKey).toString('base64');
-const client = create({
-  host: 'ipfs.infura.io',
-  port: 5001,
-  protocol: 'https',
-  apiPath: '/api/v0',
-  headers: {
-    authorization: auth,
-  }
-})
+// const auth = "Basic " + btoa(projectId + ":" + projectSecretKey);
+// const client = create({
+//   host: 'ipfs.infura.io',
+//   port: 5001,
+//   protocol: 'https',
+//   apiPath: '/api/v0',
+//   headers: {
+//     authorization: auth,
+//   }
+// })
 
 // const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0');
 
@@ -30,6 +33,16 @@ export const NFTProvider = ({ children }) => {
   const [currentAccount, setCurrentAccount] = useState('');
   const [isLoadingNFT, setIsLoadingNFT] = useState(false);
   const nftCurrency = 'ETH';
+
+  const client = create({
+    host: 'ipfs.infura.io',
+    port: 5001,
+    protocol: 'https',
+    apiPath: '/api/v0',
+    headers: {
+      authorization: auth,
+    }
+  })
 
   const checkIfWalletIsConnected = async () => {
     if (!window.ethereum) {
@@ -62,8 +75,8 @@ export const NFTProvider = ({ children }) => {
     // const file = e.target.files[0] 
     try {
       const added = await client.add({ content: file });
-      const url = `https://ipfs.infura.io/ipfs/${added.path}`;
-      // const url = `https://prowess.infura-ipfs.io/ipfs/${added.path}`;
+      // const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+      const url = `https://prowess.infura-ipfs.io/ipfs/${added.path}`;
       return url;
     } catch (error) {
       console.log(('Error uploading to IPFS', error));
@@ -96,8 +109,8 @@ export const NFTProvider = ({ children }) => {
 
     try {
       const added = await client.add(data);
-      const url = `https://ipfs.infura.io/ipfs/${added.path}`;
-      // const url = `https://prowess.infura-ipfs.io/ipfs/${added.path}`;
+      // const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+      const url = `https://prowess.infura-ipfs.io/ipfs/${added.path}`;
 
       await createSale(url, price);
       router.push('/');
