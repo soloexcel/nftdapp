@@ -112,6 +112,14 @@
   align-items: flex-start;
 }
 
+.success {
+  color: blue;
+}
+
+.error {
+  color: red
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

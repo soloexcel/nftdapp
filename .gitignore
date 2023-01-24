@@ -27,6 +27,8 @@ artifacts
 .vscode
 node_modules
 .env
+secret.js
+config.js
 coverage
 coverage.json
 typechain
