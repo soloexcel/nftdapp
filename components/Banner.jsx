@@ -30,7 +30,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Style from "../Banner.module.css";
+import Style from "./Banner.module.css"
 import images from '../assets';
 
 const Banner = ({ parentStyles}) => {
