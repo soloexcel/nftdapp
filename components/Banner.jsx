@@ -29,10 +29,9 @@
 
 
 import React from 'react';
-import Style from "../components/Banner.module.css";
 import Image from 'next/image';
-import images from '../assets'
-
+import Style from "../Banner.module.css";
+import images from '../assets';
 
 const Banner = ({ parentStyles}) => {
   return (
@@ -49,7 +48,7 @@ const Banner = ({ parentStyles}) => {
                 </h2>
             </div>
             <div className={Style.img}>
-                <Image className={Style.heroImg} src={images.heroCat} alt="heroImg"
+                <Image className={Style.heroImg} src={images.heroCat} alt='heroImg'
                 width={500} height={500}/>
             </div>
         </div>
