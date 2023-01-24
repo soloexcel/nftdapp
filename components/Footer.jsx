@@ -1,4 +1,6 @@
-import React from 'react';
+
+
+import React, { useState, useEffect} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
@@ -16,6 +18,11 @@ const FooterLinks = ({ heading, items }) => (
 );
 
 const Footer = () => {
+
+  const [email, setEmail] = useState("");
+  const [msg, setMsg] = useState("");
+  const [displayMsg,setDisplayMsg] = useState(false);
+
 
   const socialMediaLinks = [
     {
@@ -46,6 +53,44 @@ const Footer = () => {
 
 
   const { theme } = useTheme();
+
+
+
+const handleOnChange = (e) => {
+  setEmail(e.target.value);
+};
+  
+  
+
+  const isValidEmail = () => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+  const emailValidation = () => {
+    if (email === '') {
+      setMsg("Please cross check to make sure you are not submitting an empty field.")
+    } else if (!isValidEmail(email)) {
+      setMsg("Provide a valid email address");
+    } else {setMsg("Subscription is successful.");}
+
+    // console.log(msg)
+    
+    setDisplayMsg(true);
+  }
+
+
+// const emailValidation = () => {
+//   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//   if (re.test(String(email).toLowerCase())) {
+//     console.log("Subscription successful.")
+//   } else if (!re.test(String(email)) && email !== "") {
+//     console.log("Email not valid");
+//   } else {console.log("")};
+
+// }
+
+
   return (
     <footer className="flexCenter flex-col border-t dark:border-nft-black-1 border-nft-gray-1 sm:py-8 py-16">
       <div className="w-full minmd:w-4/5 flex flex-row mx-auto md:flex-col sm:px-4 px-16">
@@ -62,16 +107,21 @@ const Footer = () => {
           </div>
           <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-base mt-6">Get the latest updates</p>
           <div className="flexBetween md:w-full minlg:w-557 w-357 mt-6 dark:bg-nft-black-2 bg-white border dark:border-nft-black-2 border-nft-gray-2 rounded-md">
-            <input type="email" placeholder="Your Email" className="h-full flex-1 w-full dark:bg-nft-black-2 bg-white px-4 rounded-md dark:text-white text-nft-black-1 font-normal text-xs minlg:text-lg outline-none" />
+            <input type="email" placeholder="Your Email" value={email} onChange = {handleOnChange} className="h-full flex-1 w-full dark:bg-nft-black-2 bg-white px-4 rounded-md dark:text-white text-nft-black-1 font-normal text-xs minlg:text-lg outline-none" />
             <div className="flex-initial">
-              <Button btnName="Subscribe" classStyles="rounded-md" />
+              <Button btnName="Subscribe" handleClick = {emailValidation} classStyles="rounded-md" />
             </div>
+              
+              
+              
           </div>
+          {/* <p>{msg ? msg : null}</p> */}
+          {displayMsg && <p className='mt-6'>{msg}</p>}
         </div>
       </div>
       <div className="flexCenter w-full mt-5 border-t dark:border-nft-black-1 border-nft-gray-1 sm:px-4 px-16">
         <div className="flexBetween flex-row w-full minmd:w-4/5 sm:flex-col mt-7">
-          <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-base">PROWESS, Inc. All Rights Reserved.</p>
+          <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-base">PROWESS. All Rights Reserved.</p>
           <div className="flex flex-row sm:mt-4">
             {socialMediaLinks.map((media, idx)  => ( 
               <div key={idx + 1} className="mx-2 cursor-pointer">
