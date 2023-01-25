@@ -24,11 +24,34 @@
     "react-dom": "17.0.2",
     "react-dropzone": "^12.0.4",
     "react-icons": "^4.7.1",
+    "react-typed": "^1.2.0",
     "web3modal": "^1.9.5"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
+    "eslint": "^8.32.0",
     "postcss": "^8.4.7",
     "tailwindcss": "^3.0.23"
-  }
+  },
+  "description": "![App Screenshot](assets/Screenshot.png)",
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soloexcel/nftdapp.git"
+  },
+  "keywords": [
+    "nft",
+    "blockchain",
+    "solidity",
+    "ipfs"
+  ],
+  "author": "Olalekan Solomon Awoyemi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soloexcel/nftdapp/issues"
+  },
+  "homepage": "https://github.com/soloexcel/nftdapp#readme"
 }

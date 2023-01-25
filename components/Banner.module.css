@@ -11,7 +11,7 @@
 .ellipse {
   height: 3rem;
   width: 30rem;
-  background-color: var(--ellipse-color);
+  background-color: gray;
   opacity: .5;
   border-radius: 100%;
   filter: blur(2000px);
@@ -24,9 +24,23 @@
 
 .container {
   padding: 2rem;
-  margin: 0 2rem;
+  margin: 0 auto;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
+
+/* .advertTxt {
+  text-shadow: 5px 5px 10px #8A929B;
+  font-size: 900;
+  font-weight: bold;
+  width: auto;
+  height: 64px; 
+  padding: 2rem;
+  background-color: #5F6260;
+  margin-bottom: 20%;
+
+} */
 .heroContent {
   z-index: 1;
   display: flex;
@@ -40,6 +54,7 @@
   font-size: clamp(3rem,  10vmin, 8rem);
   font-family: sans-serif;
   color: hsl(0 0% 98%);
+  white-space: nowrap;
 
 }
 .heroTxt{

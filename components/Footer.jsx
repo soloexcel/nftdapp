@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { FaLinkedin, FaGithub, FaTwitter, FaTelegramPlane } from 'react-icons/fa';
-import images from '../assets/index';
 import { Button } from './index';
 
 const FooterLinks = ({ heading, items }) => (
@@ -45,7 +44,7 @@ const Footer = () => {
 
     {
       name: "telegram",
-      link: "@blockie_chain",
+      link: "https://t.me/blockie_chain",
       icon: <FaTelegramPlane/>
     }
       
@@ -96,7 +95,7 @@ const handleOnChange = (e) => {
       <div className="w-full minmd:w-4/5 flex flex-row mx-auto md:flex-col sm:px-4 px-16">
         
         <div className="flex-1 justify-center items-center flex-wrap ml-10 md:ml-50 md:mt-8">
-          <FooterLinks heading="PROWESS" items={['Explore', 'How it works', 'Contact Us']} />
+          <FooterLinks heading="PROWESS" items={['Browse', 'Get Started', 'Contact Us']} />
           {/* <FooterLinks heading="Support" items={['Help Center', 'Terms of Service', 'Legal', 'Privacy Policy']} /> */}
         </div>
 

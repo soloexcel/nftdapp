@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
-
+import Typed from 'react-typed';
+import 'react-typed/dist/animatedCursor.css';
 import images from '../assets';
 import { Banner, CreatorCard, Loader, NFTCard, SearchBar } from '../components';
 import { NFTContext } from '../context/NFTContext';
@@ -103,6 +104,13 @@ const Home = () => {
           // name="Discover, collect, and sell extraordinary NFTs"
           // childStyles="md:text-4xl sm:text-2xl xs:text-xl text-left"
           // parentStyles="justifyStart mb-6 h-72 sm:h-60 p-50 xs:p-4 xs:h-44 rounded-3xl"
+          typed = {<Typed className = "text-shadow-sm text-2l font-bold w-auto h-64 mx-20 bg-blue-500 text-white whitespace-no-wrap"
+          strings={[
+          'Welcome to prowess NFT Marketplace! we offer a wide selection of unique and one-of-a-kind NFTs for you to browse and purchase.',
+      'Simply create and connect your ethereum wallet address from Metamask and purchase, create, and sell your first NFT.', 'It only takes a few minutes to get it cracked!']}  
+          typeSpeed={150}
+          backSpeed={50}
+          loop/>}
         />
         {!isLoading && !nfts.length ? (
           <h1 className="font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold ml-4 xs:ml-0">That&apos;s wierd... No NFTs for sale!</h1>
