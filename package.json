@@ -1,12 +1,15 @@
 {
+  "homepage": "https://github.com/soloexcel/nftdapp/pages/index.js",
+  
   "resolutions": {
     "react": "16.3.0"
   },
-
   "name": "nft_marketplace",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -34,6 +37,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "eslint": "^8.32.0",
+    "gh-pages": "^5.0.0",
     "postcss": "^8.4.7",
     "tailwindcss": "^3.0.23"
   },
@@ -56,6 +60,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/soloexcel/nftdapp/issues"
-  },
-  "homepage": "https://github.com/soloexcel/nftdapp/pages/index.js"
+  }
 }
