@@ -12,7 +12,7 @@ One of the key features of PROWESS is the ability for creators to set their own 
 
 The technologies behind PROWESS include the use of blockchain, specifically Ethereum, to mint and track NFTs, as well as a web3 javascript library to interact with the blockchain. The frontend of the platform is built using React, and the backend utilizes a decentralized storage facility - Infura IPFS
 
-To run this project locally, you will need to have a local development environment set up with NodeJS and npm installed. You will also need to set up a local Ethereum blockchain using tools such as Ganache or Truffle Suite, Hardhat, and connect it to the frontend using a web3 provider.
+To run this project locally, you will need to have a local development environment set up with NodeJS and npm installed. You will also need to set up a local Ethereum blockchain using Hardhat, and connect it to the frontend using a web3 provider.
 
 Once your development environment is set up, you can clone the project repository and run the following commands:
 

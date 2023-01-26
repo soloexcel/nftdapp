@@ -1,4 +1,8 @@
 {
+  "resolutions": {
+    "react": "16.3.0"
+  },
+
   "name": "nft_marketplace",
   "version": "0.1.0",
   "private": true,
@@ -53,5 +57,5 @@
   "bugs": {
     "url": "https://github.com/soloexcel/nftdapp/issues"
   },
-  "homepage": "https://github.com/soloexcel/nftdapp#readme"
+  "homepage": "https://github.com/soloexcel/nftdapp/pages/index.js"
 }
