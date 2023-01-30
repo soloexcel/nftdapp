@@ -65,8 +65,12 @@ const CreateNFT = () => {
             {fileUrl && (
               <aside>
                 <div>
-                  <Image src={fileUrl} alt="asset_file"
-                  width={300} height={350} />
+                  <Image
+                    src={fileUrl}
+                    alt="asset_file"
+                    width={300}
+                    height={350}
+                  />
                 </div>
               </aside>
             )}
