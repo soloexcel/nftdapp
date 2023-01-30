@@ -2,10 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 import Style from "./Banner.module.css"
 import images from '../assets';
-// import Typed from 'react-typed';
-// import 'react-typed/dist/animatedCursor.css';
+import Typed from 'react-typed';
+import 'react-typed/dist/animatedCursor.css';
 
-const Banner = () => {
+const Banner = ({ typed }) => {
   return (
     <div className={Style.home_section + `relative w-full z-0 overflow-hidden nft-gradient`}>
         <div className={Style.ellipse}></div>
@@ -21,7 +21,7 @@ const Banner = () => {
             </div>
         </div>
             {/* displaying advert text  */}
-            {/* {typed} */}
+            {typed}
     </div>
   )
 }

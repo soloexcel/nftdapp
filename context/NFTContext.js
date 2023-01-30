@@ -8,10 +8,10 @@ import { MarketAddress, MarketAddressABI } from './constants';
 import { REACT_APP_PROJECT_ID, REACT_APP_PROJECT_SECRET_KEY } from "../secret";
 
 
-const projectId = REACT_APP_PROJECT_ID;
-// const projectId = "2KW2Rx8nZXHTRAqaJ4OkIFw8FeE";
-const projectSecretKey = REACT_APP_PROJECT_SECRET_KEY;
-// const projectSecretKey = "d874c6412c07d0a5248bd3d32f96a044"
+// const projectId = REACT_APP_PROJECT_ID;
+const projectId = "2KW2Rx8nZXHTRAqaJ4OkIFw8FeE";
+// const projectSecretKey = REACT_APP_PROJECT_SECRET_KEY;
+const projectSecretKey = "d874c6412c07d0a5248bd3d32f96a044"
 const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecretKey).toString('base64');
 // const auth = "Basic " + btoa(projectId + ":" + projectSecretKey);
 // const client = create({
