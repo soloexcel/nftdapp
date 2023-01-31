@@ -5,7 +5,7 @@ import axios from 'axios';
 // import { create as ipfsHttpClient } from 'ipfs-http-client';
 import { create } from 'ipfs-http-client';
 import { MarketAddress, MarketAddressABI } from './constants';
-import { REACT_APP_PROJECT_ID, REACT_APP_PROJECT_SECRET_KEY } from "../secret";
+// import { REACT_APP_PROJECT_ID, REACT_APP_PROJECT_SECRET_KEY } from "../secret";
 
 
 // const projectId = NEXT_APP_PROJECT_ID;
