@@ -4,3 +4,5 @@ This favicon was generated using the following font:
 - Font Author: Copyright 2022 The Alexandria Project Authors (https://github.com/Gue3bara/Alexandria)
 - Font Source: http://fonts.gstatic.com/s/alexandria/v1/UMBCrPdDqW66y0Y2usFeQCH18mulUxBvI9r7TqbHHJ8BRq0b.ttf
 - Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
+
+@nomiclabs/hardhat-waffle
