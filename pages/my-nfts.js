@@ -70,7 +70,6 @@ const MyNFTs = () => {
           name="Your Nifty NFTs"
           childStyles="text-center mt-4"
           parentStyles="h-80 justify-center"
-          
         />
         <div className="flexCenter flex-col z-0 -mt-20">
           <div className="flexCenter w-40 h-40 sm:w-36 sm:h-36 p-1 bg-nft-black-1 rounded-full">
