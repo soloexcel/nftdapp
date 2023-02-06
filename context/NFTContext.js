@@ -2,29 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Web3Modal from 'web3modal';
 import { ethers } from 'ethers';
 import axios from 'axios';
-// import { create as ipfsHttpClient } from 'ipfs-http-client';
 import { create } from 'ipfs-http-client';
 import { MarketAddress, MarketAddressABI } from './constants';
-// import { REACT_APP_PROJECT_ID, REACT_APP_PROJECT_SECRET_KEY } from "../secret";
 
-
-// const projectId = NEXT_APP_PROJECT_ID;
-const projectId = "2KW2Rx8nZXHTRAqaJ4OkIFw8FeE";
-// const projectSecretKey = NEXT_APP_PROJECT_SECRET_KEY;
-const projectSecretKey = "d874c6412c07d0a5248bd3d32f96a044"
+const projectId = process.env.NEXT_PUBLIC_PROJECT_ID;
+const projectSecretKey = process.env.NEXT_PUBLIC_PROJECT_SECRET_KEY;
 const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecretKey).toString('base64');
-// const auth = "Basic " + btoa(projectId + ":" + projectSecretKey);
-// const client = create({
-//   host: 'ipfs.infura.io',
-//   port: 5001,
-//   protocol: 'https',
-//   apiPath: '/api/v0',
-//   headers: {
-//     authorization: auth,
-//   }
-// })
 
-// const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0');
 
 const fetchContract = (signerOrProvider) => new ethers.Contract(MarketAddress, MarketAddressABI, signerOrProvider);
 
