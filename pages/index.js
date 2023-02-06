@@ -129,7 +129,7 @@ const Home = () => {
                   {topCreators.map((creator, i) => (
                     <CreatorCard
                       key={creator.seller}
-                      rank={nfts.length}
+                      rank={i + 1}
                       creatorImg={images[`creator${i + 1}`]}
                       creatorName={shortenAddress(creator.seller)}
                       creatorEths={creator.sum}
