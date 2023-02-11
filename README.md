@@ -43,7 +43,6 @@ Whether you are an artist looking to monetize your work, a collector searching f
 
 ## Check the live Demo at:
 ```bash
-https://nftdapp-blue.vercel.app/
 https://nftdapp-cgo7ok7mv-soloexcel.vercel.app/
 ```
 
